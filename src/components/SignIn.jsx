@@ -38,18 +38,16 @@ const SignInForm = ({ onSubmit }) => (
 )
 
 const validationSchema = yup.object().shape({
-  mass: yup
+  username: yup
     .number()
     .min(1, 'Weight must be greater or equal to 1')
     .required('Weight is required'),
-  height: yup
+  password: yup
     .number()
     .min(0.5, 'Height must be greater or equal to 0.5')
-    .required('Height is required'),
-  poista: yup
-    .string()
-    .required
+    .required('Height is required')
 });
+
 
 const styles = StyleSheet.create({
   textInput: {
