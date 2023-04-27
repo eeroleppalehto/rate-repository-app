@@ -1,17 +1,20 @@
 import { FlatList, View, StyleSheet } from "react-native";
 import RepositoryItem from "./RepositoryItem";
 import theme from "../theme";
+// import { ScrollView } from "react-native";
 
 
 const RepositoryList = () => {
   return (
-    <FlatList
-      style={styles.container}
-      data={repositories}
-      ItemSeparatorComponent={ItemSeparator}
-      renderItem={({item}) => <RepositoryItem repositoryObj={item}/>}
-      keyExtractor={item => item.id}
-    />
+    <>
+      <FlatList
+        style={styles.container}
+        data={repositories}
+        ItemSeparatorComponent={ItemSeparator}
+        renderItem={({item}) => <RepositoryItem repositoryObj={item}/>}
+        keyExtractor={item => item.id}
+      />
+    </>
   )
 };
 
@@ -74,6 +77,17 @@ const repositories = [
     reviewCount: 0,
     ownerAvatarUrl: 'https://avatars3.githubusercontent.com/u/13142323?v=4',
   },
+  {
+    id: 'javascript.js',
+    fullName: 'javascript/js',
+    description: 'Some filler text',
+    language: 'Javascript',
+    forksCount: 13902,
+    stargazersCount: 52869,
+    ratingAverage: 99,
+    reviewCount: 56,
+    ownerAvatarUrl: 'https://avatars3.githubusercontent.com/u/13142323?v=4',
+  }
 ];
 
 export default RepositoryList;
