@@ -52,10 +52,11 @@ const RepositoryItem = ({repositoryObj}) => {
       <View style={styles.flexItemRowA}>
         <Image style={styles.avatar} source={{ uri: repositoryObj.ownerAvatarUrl}}/>
         <View style={{ paddingLeft: 5 }}>
-          <Text style={{fontWeight: '700'}}>{repositoryObj.fullName}</Text>
-          <Text>{repositoryObj.description}</Text>
-          <View>
-            <Text style={styles.textBG}>{repositoryObj.language}</Text>
+          <Text style={{fontWeight: '700', paddingBottom: 2}}>{repositoryObj.fullName}</Text>
+          <Text style={{paddingBottom: 4}}>{repositoryObj.description}</Text>
+          <View style={{flexDirection: "row"}}>
+            <View style={{flexGrow: 0}}><Text style={styles.textBG}>{repositoryObj.language}</Text></View>
+            <View style={{flexGrow: 1}}></View>
           </View>
         </View>
       </View>
