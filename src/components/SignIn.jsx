@@ -39,13 +39,11 @@ const SignInForm = ({ onSubmit }) => (
 
 const validationSchema = yup.object().shape({
   username: yup
-    .number()
-    .min(1, 'Weight must be greater or equal to 1')
-    .required('Weight is required'),
+    .string()
+    .required('Username is required'),
   password: yup
-    .number()
-    .min(0.5, 'Height must be greater or equal to 0.5')
-    .required('Height is required')
+    .string()
+    .required('Password is required')
 });
 
 
